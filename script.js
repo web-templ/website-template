@@ -1,3 +1,24 @@
+// Prevent mobile browsers from restoring a mid-page scroll position on load/back-forward navigation.
+if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+}
+
+function forceScrollToTop() {
+    window.scrollTo(0, 0);
+}
+
+if (!window.location.hash) {
+    forceScrollToTop();
+    requestAnimationFrame(forceScrollToTop);
+    window.addEventListener("load", forceScrollToTop);
+}
+
+window.addEventListener("pageshow", (event) => {
+    if (event.persisted && !window.location.hash) {
+        forceScrollToTop();
+    }
+});
+
 const menuItems = [
     { category: "WOK", number: "1", name: "Wok su krevetėmis ir austrių padažu", price: "10.50 €", image: "https://www.sushiout.lt/storage/734/conversions/01KPASKENVKXEKV22JS10T7ZSE-thumb.webp" },
     { category: "WOK", number: "2", name: "Wok su krevetėmis ir kreminiu kokosų padažu", price: "10.50 €", image: "https://www.sushiout.lt/storage/712/conversions/01KP2N4JDBA8MTK0XEECRDVYTY-thumb.webp" },
@@ -259,6 +280,12 @@ function renderMenu() {
             media.classList.add("is-fallback");
         }, { once: true });
 
+        if (image.complete) {
+            image.classList.add("is-loaded");
+        } else {
+            image.addEventListener("load", () => image.classList.add("is-loaded"), { once: true });
+        }
+
         button.addEventListener("click", () => openModal(originalIndex, button));
 
         fragment.append(button);
@@ -399,8 +426,14 @@ function openModal(index, triggerEl) {
 
     lastFocusedElement = triggerEl || document.activeElement;
 
+    modalImage.classList.remove("is-loaded");
     modalImage.src = item.image;
     modalImage.alt = item.name;
+    if (modalImage.complete) {
+        modalImage.classList.add("is-loaded");
+    } else {
+        modalImage.addEventListener("load", () => modalImage.classList.add("is-loaded"), { once: true });
+    }
     modalCategory.textContent = item.category;
     modalTitle.textContent = item.name;
     modalPrice.textContent = item.price;
