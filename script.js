@@ -175,6 +175,22 @@ const modalPrice = document.querySelector("#modal-price");
 const categories = ["ALL", ...new Set(menuItems.map((item) => item.category))];
 let lastFocusedElement = null;
 
+const categoryIcons = {
+    ALL: "✨",
+    WOK: "🥢",
+    OUT: "🍱",
+    XXL: "🍣",
+    MAKI: "🍙",
+    HOSOMAKI: "🍘",
+    "VEGETARIŠKI": "🥦",
+    "KARŠTI SUSHI": "🔥",
+    RINKINIAI: "🍽️",
+    SRIUBOS: "🍜",
+    "UŽKANDŽIAI": "🥟",
+    "DIENOS PIETŪS": "🍲",
+    "GĖRIMAI": "🥤"
+};
+
 function t() {
     return i18n[state.lang];
 }
@@ -195,7 +211,9 @@ function createFilterButtons() {
         button.type = "button";
         button.className = `filter-button${category === state.activeCategory ? " is-active" : ""}`;
         button.dataset.category = category;
-        button.textContent = category === "ALL" ? t().allCategories : category;
+        const icon = categoryIcons[category] || "🍴";
+        const label = category === "ALL" ? t().allCategories : category;
+        button.innerHTML = `<span class="filter-icon" aria-hidden="true">${icon}</span><span>${label}</span>`;
         button.addEventListener("click", () => {
             state.activeCategory = category;
             updateActiveFilter();
@@ -257,15 +275,13 @@ function renderMenu() {
 
         button.innerHTML = `
             <div class="menu-media" data-category="${item.category}" data-title="${item.name}">
+                ${item.number ? `<span class="menu-number">#${item.number}</span>` : ""}
                 <img src="${item.image}" alt="${item.name}" loading="lazy" decoding="async">
                 <span class="menu-view">${t().viewItem}</span>
             </div>
             <div class="menu-body">
                 <div class="menu-meta">
-                    <h3 class="menu-title">
-                        ${item.number ? `<span class="menu-number">${item.number}</span>` : ""}
-                        <strong>${item.name}</strong>
-                    </h3>
+                    <h3 class="menu-title"><strong>${item.name}</strong></h3>
                     <span class="menu-price">${item.price}</span>
                 </div>
                 <p>${item.category}</p>
