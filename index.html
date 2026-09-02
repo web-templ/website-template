@@ -11,14 +11,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="grain" aria-hidden="true"></div>
-
     <div class="site-shell">
         <header class="site-header" id="top">
             <div class="container header-inner">
@@ -30,7 +28,8 @@
                     </span>
                     <span class="brand-copy">
                         <strong>Sushi Out</strong>
-                        <span data-lt="Vilnius, Verkių g. 1" data-en="Vilnius, Verkių st. 1">Vilnius, Verkių g. 1</span>
+                        <span data-lt="Sushi, wok ir azijietiški skoniai" data-en="Sushi, wok and Asian flavours">Sushi,
+                            wok ir azijietiški skoniai</span>
                     </span>
                 </a>
 
@@ -63,13 +62,16 @@
 
         <main>
             <section class="hero section" id="home">
-                <div class="hero-glow" aria-hidden="true"></div>
+                <div class="hero-bg" aria-hidden="true">
+                    <img src="https://www.sushiout.lt/storage/411/conversions/01JVS52278QQND9VK7HPA9YBTR-webp.webp"
+                        alt="" loading="eager">
+                </div>
                 <div class="container hero-grid">
                     <div class="hero-copy reveal">
-                        <p class="tag-stamp">Vilnius · Verkių g. 1</p>
-                        <h1 data-lt="Sushi ir wok, miesto naktį atvirai."
-                            data-en="Sushi and wok, open into the city night.">Sushi ir wok, miesto naktį
-                            atvirai.</h1>
+                        <p class="eyebrow">Vilnius • Verkių g. 1</p>
+                        <h1 data-lt="Modernus sushi ir wok pasirinkimas miesto ritmui."
+                            data-en="Modern sushi and wok, made for city life.">Modernus sushi ir wok pasirinkimas
+                            miesto ritmui.</h1>
                         <p class="hero-text"
                             data-lt="Sushi Out siūlo japonišką, azijietišką ir sveikesnį fast food formatą vienoje vietoje. Meniu apima wok, maki, karštus sushi, rinkinius, sriubas, užkandžius ir gėrimus."
                             data-en="Sushi Out brings Japanese, Asian and healthier fast food together in one place. The menu covers wok, maki, hot sushi, sets, soups, snacks and drinks.">
@@ -82,33 +84,67 @@
                             <a class="button button-secondary" href="tel:+37061488844" data-lt="Skambinti dabar"
                                 data-en="Call now">Skambinti dabar</a>
                         </div>
+                        <ul class="hero-points" aria-label="Svarbiausia informacija">
+                            <li data-lt="Atidaryta kasdien 11:00-22:00" data-en="Open daily 11:00-22:00">Atidaryta
+                                kasdien 11:00-22:00</li>
+                            <li data-lt="Japoniška, sushi, azijietiška, healthy"
+                                data-en="Japanese, sushi, Asian, healthy">Japoniška, sushi, azijietiška, healthy</li>
+                            <li data-lt="Greitas pasirinkimas pietums ir vakarui"
+                                data-en="Quick choice for lunch and dinner">Greitas pasirinkimas pietums ir vakarui
+                            </li>
+                        </ul>
                     </div>
 
-                    <div class="hero-ticket reveal">
-                        <div class="ticket">
-                            <div class="ticket-top">
-                                <p class="tag-stamp" data-lt="Šiandien" data-en="Today">Šiandien</p>
+                    <div class="hero-panel reveal">
+                        <div class="panel-card spotlight-card">
+                            <div class="spotlight-head">
+                                <p class="eyebrow" data-lt="Šiandienos statusas" data-en="Today's status">Šiandienos
+                                    statusas</p>
                                 <span class="status-pill" id="open-status">
                                     <span class="status-dot" aria-hidden="true"></span>
                                     <span class="status-text">Tikrinama...</span>
                                 </span>
                             </div>
-                            <div class="ticket-perf" aria-hidden="true"></div>
-                            <dl class="ticket-meta">
+                            <div class="spotlight-meta">
                                 <div>
-                                    <dt data-lt="Darbo laikas" data-en="Hours">Darbo laikas</dt>
-                                    <dd data-lt="11:00–22:00 kiekvieną dieną" data-en="11:00–22:00 every day">11:00–22:00
-                                        kiekvieną dieną</dd>
+                                    <span data-lt="Darbo laikas" data-en="Hours">Darbo laikas</span>
+                                    <strong data-lt="11:00-22:00 kiekvieną dieną" data-en="11:00-22:00 every day">
+                                        11:00-22:00 kiekvieną dieną</strong>
                                 </div>
                                 <div>
-                                    <dt data-lt="Telefonas" data-en="Phone">Telefonas</dt>
-                                    <dd><a href="tel:+37061488844">+37061488844</a></dd>
+                                    <span data-lt="Telefonas" data-en="Phone">Telefonas</span>
+                                    <strong><a href="tel:+37061488844">+37061488844</a></strong>
                                 </div>
                                 <div>
-                                    <dt data-lt="Adresas" data-en="Address">Adresas</dt>
-                                    <dd>Verkių g. 1, Vilnius, 09303</dd>
+                                    <span data-lt="Adresas" data-en="Address">Adresas</span>
+                                    <strong>Verkių g. 1, Vilnius, 09303 Vilniaus m. sav.</strong>
                                 </div>
-                            </dl>
+                            </div>
+                        </div>
+
+                        <div class="panel-grid">
+                            <article class="panel-card mini-card reveal" style="--d:1">
+                                <p class="mini-label" data-lt="Populiaru" data-en="Popular">Populiaru</p>
+                                <h2>WOK</h2>
+                                <p data-lt="Krevetės, lašiša, vištiena ir vegetariški pasirinkimai su skirtingais padažais."
+                                    data-en="Shrimp, salmon, chicken and vegetarian options with a choice of sauces.">
+                                    Krevetės, lašiša, vištiena ir vegetariški pasirinkimai su skirtingais padažais.</p>
+                            </article>
+                            <article class="panel-card mini-card reveal" style="--d:2">
+                                <p class="mini-label" data-lt="Mėgstami" data-en="Fan favourites">Mėgstami</p>
+                                <h2>MAKI</h2>
+                                <p data-lt="Platus pasirinkimas nuo SAKE AVOCADO MAKI iki DUBAI GOLD ir BROOKLYN."
+                                    data-en="A wide range from SAKE AVOCADO MAKI to DUBAI GOLD and BROOKLYN.">Platus
+                                    pasirinkimas nuo SAKE AVOCADO MAKI iki DUBAI GOLD ir BROOKLYN.</p>
+                            </article>
+                            <article class="panel-card mini-card reveal" style="--d:3">
+                                <p class="mini-label" data-lt="Greitam užsakymui" data-en="Quick order">Greitam
+                                    užsakymui</p>
+                                <h2 data-lt="OUT ir rinkiniai" data-en="OUT & sets">OUT ir rinkiniai</h2>
+                                <p data-lt="Patogūs setai ir OUT pasirinkimai, kai norisi greitai apsispręsti."
+                                    data-en="Convenient sets and OUT options when you want a quick decision.">Patogūs
+                                    setai ir OUT pasirinkimai, kai norisi greitai apsispręsti.</p>
+                            </article>
                         </div>
                     </div>
                 </div>
@@ -119,29 +155,27 @@
             </section>
 
             <section class="highlights section">
-                <div class="container highlights-rail reveal">
-                    <div class="highlight-item">
-                        <span class="highlight-figure" id="stat-items">0</span>
-                        <span class="highlight-label" data-lt="patiekalų meniu" data-en="menu items">patiekalų
-                            meniu</span>
-                    </div>
-                    <div class="highlight-divider" aria-hidden="true"></div>
-                    <div class="highlight-item">
-                        <span class="highlight-figure" id="stat-categories">0</span>
-                        <span class="highlight-label" data-lt="kategorijų" data-en="categories">kategorijų</span>
-                    </div>
-                    <div class="highlight-divider" aria-hidden="true"></div>
-                    <div class="highlight-item">
-                        <span class="highlight-figure">7</span>
-                        <span class="highlight-label" data-lt="dienos per savaitę" data-en="days a week">dienos per
-                            savaitę</span>
-                    </div>
-                    <div class="highlight-divider" aria-hidden="true"></div>
-                    <div class="highlight-item">
-                        <span class="highlight-figure">11–22</span>
-                        <span class="highlight-label" data-lt="atidaryta kasdien" data-en="open daily">atidaryta
-                            kasdien</span>
-                    </div>
+                <div class="container highlights-grid">
+                    <article class="highlight-card reveal" style="--d:1">
+                        <p class="eyebrow" data-lt="Virtuvė" data-en="Kitchen">Virtuvė</p>
+                        <h2 data-lt="Subalansuotas pasirinkimas" data-en="A balanced selection">Subalansuotas
+                            pasirinkimas</h2>
+                        <p>Japanese, Fast Food, Sushi, Asian, Healthy.</p>
+                    </article>
+                    <article class="highlight-card reveal" style="--d:2">
+                        <p class="eyebrow" data-lt="Darbo laikas" data-en="Hours">Darbo laikas</p>
+                        <h2 data-lt="Atidaryta 7 dienas per savaitę" data-en="Open 7 days a week">Atidaryta 7 dienas
+                            per savaitę</h2>
+                        <p data-lt="Patikimas darbo laikas nuo 11:00 iki 22:00 kiekvieną savaitės dieną."
+                            data-en="Reliable opening hours from 11:00 to 22:00 every day of the week.">Patikimas
+                            darbo laikas nuo 11:00 iki 22:00 kiekvieną savaitės dieną.</p>
+                    </article>
+                    <article class="highlight-card reveal" style="--d:3">
+                        <p class="eyebrow" data-lt="Vieta" data-en="Location">Vieta</p>
+                        <h2 data-lt="Patogi lokacija Vilniuje" data-en="A convenient Vilnius location">Patogi lokacija
+                            Vilniuje</h2>
+                        <p>Verkių g. 1, Vilnius, 09303 Vilniaus m. sav.</p>
+                    </article>
                 </div>
             </section>
 
@@ -152,10 +186,10 @@
                             alt="Sushi Out patiekalų kompozicija" loading="lazy" decoding="async">
                     </div>
                     <div class="about-copy reveal">
-                        <p class="tag-stamp" data-lt="Apie mus" data-en="About us">Apie mus</p>
-                        <h2 data-lt="Japoniška virtuvė, kai miestas įsibėgėja"
-                            data-en="Japanese kitchen for when the city picks up pace">Japoniška virtuvė, kai miestas
-                            įsibėgėja</h2>
+                        <p class="eyebrow" data-lt="Apie mus" data-en="About us">Apie mus</p>
+                        <h2 data-lt="Šviežia japoniška virtuvė Vilniaus širdyje"
+                            data-en="Fresh Japanese kitchen in the heart of Vilnius">Šviežia japoniška virtuvė
+                            Vilniaus širdyje</h2>
                         <p data-lt="Sushi Out yra Vilniuje veikiantis japonų virtuvės ir azijietiško maisto restoranas, įsikūręs Verkių g. 1. Siūlome sushi, wok, karštus užkandžius ir sveikesnius pasirinkimus kiekvienai dienai."
                             data-en="Sushi Out is a Japanese and Asian food restaurant in Vilnius, located at Verkių g. 1. We serve sushi, wok, hot snacks and healthier choices for every day.">
                             Sushi Out yra Vilniuje veikiantis japonų virtuvės ir azijietiško maisto restoranas,
@@ -165,6 +199,21 @@
                             data-en="Our kitchen pairs fresh ingredients with fast service — perfect for a lunch break or dinner with friends.">
                             Mūsų virtuvė derina šviežius ingredientus su greitu aptarnavimu — patogu tiek pietų
                             pertraukai, tiek vakarienei su draugais.</p>
+
+                        <div class="about-stats">
+                            <div class="stat">
+                                <strong id="stat-items">0</strong>
+                                <span data-lt="patiekalų meniu" data-en="menu items">patiekalų meniu</span>
+                            </div>
+                            <div class="stat">
+                                <strong id="stat-categories">0</strong>
+                                <span data-lt="kategorijų" data-en="categories">kategorijų</span>
+                            </div>
+                            <div class="stat">
+                                <strong>7</strong>
+                                <span data-lt="dienos per savaitę" data-en="days a week">dienos per savaitę</span>
+                            </div>
+                        </div>
 
                         <ul class="about-tags">
                             <li data-lt="Šviežia" data-en="Fresh">Šviežia</li>
@@ -179,37 +228,38 @@
             <section class="menu-section section" id="menu">
                 <div class="container">
                     <div class="section-heading reveal">
-                        <p class="tag-stamp" data-lt="Meniu" data-en="Menu">Meniu</p>
-                        <h2 data-lt="Visas Sushi Out pasirinkimas"
-                            data-en="The whole Sushi Out selection">Visas Sushi Out pasirinkimas</h2>
+                        <p class="eyebrow" data-lt="Meniu" data-en="Menu">Meniu</p>
+                        <h2 data-lt="Visas Sushi Out pasirinkimas vienoje vietoje"
+                            data-en="The whole Sushi Out selection in one place">Visas Sushi Out pasirinkimas vienoje
+                            vietoje</h2>
                         <p data-lt="Filtruokite pagal kategoriją arba ieškokite konkretaus patiekalo. Spustelėkite patiekalą, kad pamatytumėte daugiau."
                             data-en="Filter by category or search for a specific dish. Click a dish to see more.">
                             Filtruokite pagal kategoriją arba ieškokite konkretaus patiekalo. Spustelėkite patiekalą,
                             kad pamatytumėte daugiau.</p>
                     </div>
 
-                    <label class="search-field reveal" for="menu-search">
-                        <span class="sr-only" data-lt="Ieškoti meniu" data-en="Search menu">Ieškoti meniu</span>
-                        <input id="menu-search" type="search" data-lt-ph="Ieškoti pagal pavadinimą arba kategoriją"
-                            data-en-ph="Search by name or category"
-                            placeholder="Ieškoti pagal pavadinimą arba kategoriją">
-                    </label>
-
-                    <div class="menu-layout reveal">
-                        <div class="menu-rail" id="category-filters" aria-label="Meniu kategorijos"></div>
-
-                        <div class="menu-content">
-                            <p class="menu-summary" id="menu-results">Rodoma visa meniu kolekcija.</p>
-                            <div class="menu-list" id="menu-grid" aria-live="polite"></div>
-                        </div>
+                    <div class="menu-toolbar reveal">
+                        <div class="filter-group" id="category-filters" aria-label="Meniu kategorijos"></div>
+                        <label class="search-field" for="menu-search">
+                            <span class="sr-only" data-lt="Ieškoti meniu" data-en="Search menu">Ieškoti meniu</span>
+                            <input id="menu-search" type="search" data-lt-ph="Ieškoti pagal pavadinimą arba kategoriją"
+                                data-en-ph="Search by name or category"
+                                placeholder="Ieškoti pagal pavadinimą arba kategoriją">
+                        </label>
                     </div>
+
+                    <div class="menu-summary reveal">
+                        <p id="menu-results">Rodoma visa meniu kolekcija.</p>
+                    </div>
+
+                    <div class="menu-grid" id="menu-grid" aria-live="polite"></div>
                 </div>
             </section>
 
             <section class="hours-section section" id="hours">
                 <div class="container hours-grid">
                     <div class="section-heading reveal">
-                        <p class="tag-stamp" data-lt="Darbo laikas" data-en="Hours">Darbo laikas</p>
+                        <p class="eyebrow" data-lt="Darbo laikas" data-en="Hours">Darbo laikas</p>
                         <h2 data-lt="Pastovus grafikas visai savaitei" data-en="A steady schedule all week">Pastovus
                             grafikas visai savaitei</h2>
                         <p data-lt="Patogu planuoti tiek greitus pietus, tiek vakarinius užsakymus."
@@ -231,7 +281,7 @@
             <section class="visit-section section" id="visit">
                 <div class="container visit-grid">
                     <article class="visit-card reveal">
-                        <p class="tag-stamp" data-lt="Apsilankykite" data-en="Visit us">Apsilankykite</p>
+                        <p class="eyebrow" data-lt="Apsilankykite" data-en="Visit us">Apsilankykite</p>
                         <h2>Verkių g. 1, Vilnius</h2>
                         <p data-lt="Sushi Out įsikūręs adresu Verkių g. 1, Vilnius, 09303 Vilniaus m. sav. Patogi vieta užsukti sushi, wok ar lengvam azijietiškam užkandžiui."
                             data-en="Sushi Out is located at Verkių g. 1, Vilnius, 09303 Vilnius district. A convenient place to stop for sushi, wok or a light Asian snack.">
@@ -248,7 +298,7 @@
                     </article>
 
                     <article class="contact-card reveal" id="contact">
-                        <p class="tag-stamp" data-lt="Kontaktai" data-en="Contact">Kontaktai</p>
+                        <p class="eyebrow" data-lt="Kontaktai" data-en="Contact">Kontaktai</p>
                         <h2 data-lt="Greitas kontaktas" data-en="Quick contact">Greitas kontaktas</h2>
                         <dl class="contact-list">
                             <div>
