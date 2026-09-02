@@ -30,7 +30,7 @@ const menuItems = [
     { category: "WOK", number: "8", name: "Wok su vištiena ir teriyaki padažu", price: "9.50 €", desc: "Kiaušiniai makaronai, vištiena, kiaušiniai, morka, cukinija, brokoliai, paprika, porai, kopūstai, teriyaki padažas, sezamai.", image: "https://www.sushiout.lt/storage/716/conversions/01KP2QD2YKZQV0D3PKYVZBRSZC-thumb.webp" },
     { category: "WOK", number: "9", name: "Vegetariškas wok su teriyaki padažu", price: "8.00 €", desc: "Makaronai, morka, cukinija, brokoliai, paprika, porai, kopūstai, teriyaki padažas, sezamų sėklos.", image: "https://www.sushiout.lt/storage/719/conversions/01KP2RM63XECTB1F8K7ZBM29YH-thumb.webp" },
     { category: "WOK", number: "10", name: "Vegetariškas wok su kreminiu kokosų padažu", price: "8.00 €", desc: "Makaronai, morka, cukinija, brokoliai, paprika, porai, kopūstai, kreminis kokosų padažas, kepinti svogūnai.", image: "https://www.sushiout.lt/storage/720/conversions/01KP2S3RV8Q2J2THSFYGAQ3N6H-thumb.webp" },
-    { category: "OUT", number: "33", name: "OUT 1", price: "14.00 €", desc: "Šviežia lašiša, ryžiai, avokadas, kreminis sūris, masago ikrai, išskirtinis Sushi Out padažas.", image: "https://www.sushiout.lt/storage/198/conversions/01JVH9G4SFBDKMXA6FE84WN2P3-thumb.webp" },
+    { category: "OUT", number: "33", name: "OUT 1", price: "14.00 €", desc: "Šviežia lašiša, ryžiai, avokadas, kreminis sūris, masago ikrai, išskirtinis Your Company padažas.", image: "https://www.sushiout.lt/storage/198/conversions/01JVH9G4SFBDKMXA6FE84WN2P3-thumb.webp" },
     { category: "OUT", number: "34", name: "OUT 2", price: "14.00 €", desc: "Tunas, krevetės, ryžiai, agurkas, kreminis sūris, unagi padažas, kepinti sezamai.", image: "https://www.sushiout.lt/storage/106/conversions/34.-OUT-2-thumb.webp" },
     { category: "OUT", number: "35", name: "OUT 3", price: "14.00 €", desc: "Kepta lašiša, agurkas, avokadas, kreminis sūris, spaiši padažas, panko traškučiai.", image: "https://www.sushiout.lt/storage/199/conversions/01JVH9HB0C8B1P0STEC3DGT2FY-thumb.webp" },
     { category: "OUT", number: "36", name: "OUT 4", price: "14.00 €", desc: "Rūkyta lašiša, krevetės, agurkas, kreminis sūris, tobiko ikrai, sweet chili padažas.", image: "https://www.sushiout.lt/storage/108/conversions/36.-OUT-4-thumb.webp" },
@@ -148,7 +148,7 @@ const i18n = {
 const state = {
     activeCategory: "ALL",
     searchTerm: "",
-    lang: localStorage.getItem("sushiout-lang") || "lt"
+    lang: localStorage.getItem("yourcompany-lang") || "lt"
 };
 
 const menuGrid = document.querySelector("#menu-grid");
@@ -170,6 +170,7 @@ const modal = document.querySelector("#item-modal");
 const modalImage = document.querySelector("#modal-image");
 const modalCategory = document.querySelector("#modal-category");
 const modalTitle = document.querySelector("#modal-title");
+const modalPrice = document.querySelector("#modal-price");
 const modalDescription = document.querySelector("#modal-description");
 
 const categories = ["ALL", ...new Set(menuItems.map((item) => item.category))];
@@ -498,7 +499,7 @@ function setupModal() {
 
 function applyLanguage(lang) {
     state.lang = lang;
-    localStorage.setItem("sushiout-lang", lang);
+    localStorage.setItem("yourcompany-lang", lang);
     document.documentElement.lang = lang;
 
     langButtons.forEach((button) => {
