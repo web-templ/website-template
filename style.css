@@ -152,32 +152,16 @@ input {
 }
 
 .brand-mark {
-    position: relative;
     display: grid;
     place-items: center;
     width: 3rem;
     height: 3rem;
     border-radius: 1rem;
-    background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-    color: var(--on-accent);
-    font-family: "Sora", sans-serif;
-    font-weight: 700;
+    background: rgba(255, 190, 46, 0.15);
+    border: 1px solid rgba(255, 190, 46, 0.3);
+    font-size: 1.5rem;
     box-shadow: var(--shadow-sm);
-    overflow: hidden;
     flex-shrink: 0;
-}
-
-.brand-logo-img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.brand-fallback {
-    position: relative;
-    z-index: -1;
 }
 
 .brand-copy {
@@ -475,12 +459,23 @@ input {
 }
 
 .hero-grid {
-    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+.hero-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hero-copy h1 {
     margin: 0;
-    font-size: clamp(2.8rem, 5.5vw, 5.2rem);
+    font-size: clamp(3.2rem, 6.5vw, 5.8rem);
     line-height: 1.02;
     letter-spacing: -0.04em;
     color: #ffffff;
@@ -502,15 +497,17 @@ input {
 }
 
 .hero-text {
-    max-width: 60ch;
-    margin: 1.4rem 0 0;
+    max-width: 52ch;
+    margin: 1.4rem auto 0;
+    text-align: center;
 }
 
 .hero-actions,
 .visit-actions {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    justify-content: center;
+    gap: 1.25rem;
     margin-top: 2.2rem;
 }
 
@@ -1254,11 +1251,21 @@ input {
     gap: 0.75rem;
 }
 
-.footer-logo {
+.footer-logo-emoji {
+    display: grid;
+    place-items: center;
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 1rem;
-    object-fit: cover;
+    background: rgba(255, 190, 46, 0.15);
+    border: 1px solid rgba(255, 190, 46, 0.3);
+    font-size: 1.8rem;
+}
+
+.footer-copy-text {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin: 0;
 }
 
 .footer-inner strong {
