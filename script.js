@@ -426,9 +426,13 @@ function setupScheduleStatus() {
     const closeMinutes = 22 * 60;
     const isOpen = currentMinutes >= openMinutes && currentMinutes < closeMinutes;
 
-    openStatus.textContent = isOpen ? t().statusOpen : t().statusClosed;
-    openStatusPill.classList.remove("is-open", "is-closed");
-    openStatusPill.classList.add(isOpen ? "is-open" : "is-closed");
+    if (openStatus) {
+        openStatus.textContent = isOpen ? t().statusOpen : t().statusClosed;
+    }
+    if (openStatusPill) {
+        openStatusPill.classList.remove("is-open", "is-closed");
+        openStatusPill.classList.add(isOpen ? "is-open" : "is-closed");
+    }
 
     weekdayStatus.textContent = `${t().days[weekday]} • ${t().weekdaySuffix}`;
 
